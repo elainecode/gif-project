@@ -1,12 +1,12 @@
 import React from 'react';
 import ListItem from '../ListItem/ListItem';
-import './HomeList.css';
+import './HomeList.scss';
 
-const HomeList = () => {
+const HomeList = ({gifs}) => {
   return (
-    <>
-      <ListItem />
-    </>
+    <div className="list">
+    {gifs.map( gif => <ListItem gif={gif}/>)}
+    </div>
   );
 };
 

@@ -1,5 +1,8 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
 html, body {
-  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
 }
