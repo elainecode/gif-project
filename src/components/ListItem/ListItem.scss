@@ -3,10 +3,10 @@
   cursor: pointer;
   border-radius: 0.1em;
   &:nth-child(odd){
-    box-shadow: 2px 4px 6px rgba(249,64,64,0.6);
+    box-shadow: 2px 4px 6px rgba(140, 36, 119, 0.4);
     }
     &:nth-child(even){
-      box-shadow: 3px 6px 8px rgba(96,80,249, 0.6);;
+      box-shadow: 2px 4px 6px rgba(96,80,249, 0.4);;
       }
       .tag-names {
         display: flex;

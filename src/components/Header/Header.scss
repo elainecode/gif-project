@@ -1,0 +1,21 @@
+.hero-header {
+    color: #fff;
+    font-family: "Segoe UI";
+    padding: 2% 0 0 10%;
+    .title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0;
+    }
+    .subtitle {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+.header-image {
+    background: url(../../header.gif) no-repeat center center; 
+    background-size: cover;
+    height:100%;
+    opacity: 0.8;
+}
