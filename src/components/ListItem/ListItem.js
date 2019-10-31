@@ -4,12 +4,12 @@ import Media from 'react-bulma-components/lib/components/media';
 import Image from 'react-bulma-components/lib/components/image';
 import './ListItem.scss';
 
-const ListItem = ({gif}) => {
+const ListItem = ({ gif }) => {
   return (
     <div className="list-item">
-    <img src={gif.url} />
+      <img src={gif.url} />
     </div>
-    )
+  );
 };
 
-export default ListItem; 
+export default ListItem;
