@@ -12,10 +12,11 @@ class Homepage extends Component {
 
   render() {
     const { gifs } = this.props;
+    const { tags } = this.props.gifs
     return (
       <>
         <div className="filter-container">
-          <TagFilter />
+          <TagFilter tags={tags}/>
         </div>
         <div className="list-container">
           <HomeList gifs={gifs} />

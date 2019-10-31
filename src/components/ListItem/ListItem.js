@@ -7,7 +7,12 @@ import './ListItem.scss';
 const ListItem = ({ gif }) => {
   return (
     <div className="list-item">
-      <img src={gif.url} />
+      <img src={gif.url} alt={gif.title} />
+      <div className="tag-names">
+        {gif.tags.map(tag => (
+          <span> {`#${tag}`}</span>
+        ))}
+      </div>
     </div>
   );
 };
