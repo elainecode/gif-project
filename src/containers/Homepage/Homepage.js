@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getGifsFromAPI, getTagsFromAPI } from '../../actions';
 import HomeList from '../../components/HomeList/HomeList';
 import TagFilter from '../../components/TagFilter/TagFilter';
 import './Homepage.scss';
 
 class Homepage extends Component {
-  componentDidMount() {
-    this.props.getGifsFromAPI();
-    this.props.getTagsFromAPI();
-  }
+  clickGif = viewID => e => {
+    e.preventDefault();
+    this.props.history.push(`/gifs/${viewID}`);
+  };
 
   render() {
     const { gifs, tags } = this.props;
+    const { clickGif } = this;
 
     return (
       <>
@@ -20,19 +20,11 @@ class Homepage extends Component {
           <TagFilter tags={tags} />
         </div>
         <div className="list-container">
-          <HomeList gifs={gifs} />
+          <HomeList gifs={gifs} clickGif={clickGif}/>
         </div>
       </>
     );
   }
 }
 
-const mapStateToProps = ({ gifs, tags }) => ({
-  gifs,
-  tags,
-});
-
-export default connect(
-  mapStateToProps,
-  { getGifsFromAPI, getTagsFromAPI },
-)(Homepage);
+export default Homepage;

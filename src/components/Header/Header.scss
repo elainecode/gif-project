@@ -1,3 +1,7 @@
+@import "../../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../../node_modules/bulma/sass/form/_all.sass";
+@import "../../../node_modules/bulma/sass/elements/button.sass";
+
 .hero-header {
     color: #fff;
     font-family: "Segoe UI";
@@ -13,6 +17,13 @@
         font-weight: 400;
         margin: 0;
     }
+   
+}
+.header-form {
+      margin-top: 1%;  
+}
+.header-input {
+    width: 80%;
 }
 .header-image {
     grid-column: 2/3;
@@ -21,3 +32,4 @@
     height:100%;
     opacity: 0.8;
 }
+

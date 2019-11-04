@@ -1,12 +1,11 @@
 import React from 'react';
-import Card from 'react-bulma-components/lib/components/card';
-import Media from 'react-bulma-components/lib/components/media';
-import Image from 'react-bulma-components/lib/components/image';
+import { Link } from 'react-router-dom';
 import './ListItem.scss';
 
-const ListItem = ({ gif }) => {
+const ListItem = ({ gif, clickGif }) => {
+  const viewID = `${gif.title.split(' ').join('-')}-${gif.uid}`;
   return (
-    <div className="list-item">
+    <div className="list-item" onClick={clickGif(viewID)}>
       <img src={gif.url} alt={gif.title} />
       <div className="tag-names">
         {gif.tags.map(tag => (

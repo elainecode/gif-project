@@ -9,6 +9,22 @@ const Header = () => {
         <h2 className="subtitle">
           The <em>best</em> reaction gifs in one place
         </h2>
+        <div className="field has-addons header-form">
+          <div className="control header-input">
+            <input
+              className="input"
+              type="text"
+              placeholder="Find a repository"
+            />
+          </div>
+          <div className="control">
+            <input
+              type="submit"
+              class="button is-info"
+              value="Search"
+            />
+          </div>
+        </div>
       </div>
       <div className="header-image"></div>
     </>
