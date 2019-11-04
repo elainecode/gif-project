@@ -2,6 +2,7 @@
     color: #fff;
     font-family: "Segoe UI";
     padding: 2% 0 0 10%;
+    grid-column: 1/2;
     .title {
         font-size: 2rem;
         font-weight: 600;
@@ -14,6 +15,7 @@
     }
 }
 .header-image {
+    grid-column: 2/3;
     background: url(../../header.gif) no-repeat center center; 
     background-size: cover;
     height:100%;
