@@ -17,16 +17,18 @@ class App extends Component {
     const { gifs, tags } = this.props;
     return (
       <div className="parent">
-        <div className="search-container">
-          <Search />
-        </div>
         <Route
           exact
           path="/"
           render={routerProps => (
+            <>
+              <div className="search-container">
+                <Search />
+              </div>
             <div className="homepage-container">
               <Homepage gifs={gifs} tags={tags} {...routerProps} />
             </div>
+            </>
           )}
         />
         <Route

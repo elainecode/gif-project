@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './selectedView.scss';
+
 
 class SelectedView extends Component {
   render() {
@@ -10,7 +12,8 @@ class SelectedView extends Component {
       gif =>
         `${gif.title.split(' ').join('-')}-${gif.uid}` === viewID,
     );
-    return <div>{selected && selected.url}</div>;
+    return (<div className="selected-view-container">
+      </div>);
   }
 }
 
